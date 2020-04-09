@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-color: hsl(257, 40%, 49%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+    font-size: 1.2em;
+}
+.logo{
+    margin-bottom: 50px;
+    width: 200px;
+}
+.container{
+    width: 1060px;
+    max-width: 100%;
+    margin: auto;
+}
+img{
+    max-width: 100%;
+}
+.main-image{
+    min-width: 500px;
+}
+.flex{
+    display: flex;
+}
+
+.flex > div{
+    flex: 1;
+}
+.flex > div:first-child{
+    margin-right: 20px;
+}
+.flex > div:last-child{
+    margin-left:20px;
+}
+h1{
+    font-family: 'Poppins',sans-serif;
+    font-size: 2.3em;
+    font-weight: 500;
+}
+button{
+    background-color: white;
+    border-radius:50px;
+    border: none;
+    color: hsl(257, 40%, 49%);
+    padding: 15px 60px;
+    font-size: 1em;
+    box-shadow: 5px 25px 49px -11px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.2);
+}
+.social-links{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+.social-links a{
+    color: white;
+    border-radius: 50%;
+    border: 1.5px solid #ffffff;
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.attribution a{
+    color: white;
+}
+.mobile-only{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+    body{
+        background-image: none;
+        margin: 0;
+    }
+    .mobile-only{
+        background-image: url(images/bg-mobile.svg);
+        display: block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+    .m-logo{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 200px;
+    }
+    .m-main-image{
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .logo{
+        margin-top: 30px;
+        display: none;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .flex > div:first-child{
+        margin-right: 0;
+    }
+    .flex > div:last-child{
+        margin-left:0;
+        text-align: center;
+        padding: 50px;
+    }
+    .main-image{
+        min-width: 100px;
+        display: none;
+    }
+
+    h1{
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+    .social-links{
+        justify-content: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    button{
+        margin-top: 50px;
+        padding: 15px 90px;
+    }
+    .attribution{
+        display: block;
+        margin-bottom: 100px;
+    }
+}
